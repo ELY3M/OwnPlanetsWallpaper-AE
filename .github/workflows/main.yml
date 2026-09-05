@@ -72,7 +72,7 @@ jobs:
 
       - name: Rename release APK
         run: | 
-           cp ${{ steps.sign_app.outputs.signedReleaseFile }} OwnPlanetsWallpaper-${{ github.run_number }}.apk
+           cp ${{ steps.sign_app.outputs.signedReleaseFile }} OwnPlanetsWallpaper-AE-${{ github.run_number }}.apk
                   
       - name: Publish GitHub release
         uses: softprops/action-gh-release@v2
@@ -81,7 +81,7 @@ jobs:
           prerelease: false
           draft: false
           body: ${{ github.event.head_commit.message }}
-          files: OwnPlanetsWallpaper-${{ github.run_number }}.apk
+          files: OwnPlanetsWallpaper-AE-${{ github.run_number }}.apk
           name: ${{ github.run_number }} 
          
       
